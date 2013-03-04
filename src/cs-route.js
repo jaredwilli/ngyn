@@ -1,5 +1,11 @@
-﻿( function( angular ) {
-  'use strict';
+﻿/**
+ * @license ngyn
+ * Copyright (c) 2012-2013 Configit A/S https://github.com/configit
+ * License: MIT
+ */
+
+( function( angular ) {
+  "use strict";
 
   var trail = function( str, ch ) {
     return !str.match( new RegExp( ch + '$' ) ) ? str + ch : str;

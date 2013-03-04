@@ -1,5 +1,11 @@
+/**
+ * @license ngyn
+ * Copyright (c) 2012-2013 Configit A/S https://github.com/configit
+ * License: MIT
+ */
+
 ( function( angular ) {
-  'use strict';
+  "use strict";
 
   var injectCallback = function( args, successFn, errorFn ) {
     var oldSuccessFn, oldErrorFn, newargs = [];

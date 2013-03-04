@@ -1,4 +1,11 @@
+/**
+ * @license ngyn
+ * Copyright (c) 2012-2013 Configit A/S https://github.com/configit
+ * License: MIT
+ */
+ 
 ( function( angular ) {
+  "use strict";
 
   angular.module( 'cs.modules' )
   .directive( 'select', ['$parse', function( $parse ) {
