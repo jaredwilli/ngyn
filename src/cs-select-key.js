@@ -35,7 +35,8 @@
           var mappedVals = [];
           angular.forEach( collection, function( v ) {
             angular.forEach( angular.isArray( modelValue ) ? modelValue : [modelValue], function( v2 ) {
-              if ( keyParser( v ) === keyParser( v2 ) ) {
+              if ( angular.isDefined(keyParser(v)) && keyParser( v ) === keyParser( v2 ) ) {
+                //console.log(keyParser(v), keyParser(v2));
                 //console.log('mapped', v2, 'to', v, 'based on', key );
                 mappedVals.push( v );
               }
@@ -53,7 +54,7 @@
           if ( angular.isDefined( modelValue ) ) {
             replaceModelValue();
           }
-        } );
+        }, true );
 
         /*
         * Push on a formatter to watch changes to the underlying model

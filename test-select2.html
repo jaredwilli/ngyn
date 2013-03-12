@@ -23,6 +23,11 @@
     <option value="">Select a value</option>
   </select>
   <hr>
+  <h3>No selected value</h3>
+  <select id="s5" cs-select2 key="id" ng-model="anUnusedProperty" ng-options="a for a in [4,5,6]">
+    <option value="">Select a value</option>
+  </select>
+  <hr>
   <button id="btn">Update</button>
   <button ng-click="setSingle()">Set Single</button>
   <button disabled ng-click="setMultiple()">Set Multiple</button>

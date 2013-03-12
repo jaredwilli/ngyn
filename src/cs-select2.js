@@ -98,8 +98,11 @@
             if ( valuesFn ) {
               // watch the collection; re-evaluating it's reresentation and state every $digest
               scope.$watch( function() { return valuesFn( scope ); }, function() {
-                elm.select2( 'val', elm.val() );
-              } );
+                // timeout ensures we run after the element value has been pushed up from the model
+                $timeout( function() {
+                  elm.select2( 'val', elm.val() );
+                } );
+              }, true );
             }
 
           }
