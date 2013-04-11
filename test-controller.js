@@ -5,8 +5,8 @@ angular.module('app', ['cs.modules']).controller('TestController',
     {id:'1982', text:'Hello World II', code: 'AA35'}
     ];
 
-  $scope.currentTitle = $scope.titles[1];
-  $scope.currentTitle2 = $scope.titles[1];
+  $scope.currentTitle = [$scope.titles[1]];
+  $scope.currentTitle2 = [$scope.titles[1]];
 
   $scope.setSingle = function() {
     $scope.currentTitle = $scope.titles[0];
@@ -16,6 +16,7 @@ angular.module('app', ['cs.modules']).controller('TestController',
   $scope.setMultiple = function() {
     $scope.currentTitle = $scope.titles;
     $scope.currentTitle2 = $scope.titles;
+    $scope.asyncCurrentTitle = $scope.titles;
   }
 
   $scope.select2inputOptions = {
